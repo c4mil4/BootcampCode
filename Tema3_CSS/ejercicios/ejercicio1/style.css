@@ -14,12 +14,19 @@ p {
 a{
     color: #CC3300; 
 }
+
+#primero em{
+    background: #FFFFCC;
+     padding: .1em; 
+}
  
 
 em.especial {
-    background: #FFFFCC; padding: .1em;
+    background: #FFCC99;
+    border: 1px solid
+    #FF9900; padding: .1em;
 }
 
-.normal span{
+.normal span {
     font-weight: bold;
 }
