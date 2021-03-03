@@ -1,0 +1,25 @@
+ul li { 
+    /* no se usa list style image porque la imagen queda por fuera del borde del <li> */
+    /* se usa background image para que quede por dentro del <li>  */
+    /* background-repeat para no repetir imagen de fondo*/
+    /* background-position para mover la imagen de fondo */
+    /* padding-left: para relleno de la izquierda;  */
+
+    /* list-style-image:  url("image/descarga.svg"); */
+    border: 1px solid;
+    background-image: url("image/descarga.svg");
+    background-repeat: no-repeat;
+    background-position:4% 50%;
+    list-style: none;
+    padding-left: 49px;
+    cursor: pointer;
+}
+
+ul {
+    width: 10%; 
+}
+
+/* :hover selecciona el objeto donde esta el cursor */    
+ul li:hover {
+    background-color:teal;
+}

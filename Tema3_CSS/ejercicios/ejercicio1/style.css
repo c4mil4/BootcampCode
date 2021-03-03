@@ -1,7 +1,9 @@
+/* Para todos los objetos */
 * {
     font: 1em/1.3 Arial, Helvetica, sans-serif;
 }
 
+/* Todos los parrafos de color 555 */
 p {
     color: #555;
 }
@@ -11,13 +13,16 @@ p {
     color: #336699;
 }
 
+/* Todos las a(enlaces) de color cc3300 */
 a{
     color: #CC3300; 
 }
 
+/* Todas las etiquetas em que esten dentro del objeto con ID="primero" tengan este estilo */
 #primero em{
     background: #FFFFCC;
      padding: .1em; 
+     color: yellow;
 }
  
 
@@ -30,3 +35,4 @@ em.especial {
 .normal span {
     font-weight: bold;
 }
+

@@ -1,0 +1,16 @@
+div{
+    background-color: #ccc;
+    width: 20%;
+    height: 20px;
+    border: 1px;
+    border-style: groove;
+}
+
+span#previous{
+    margin-left: 4px;
+}
+
+span#next{ 
+    margin-left: 240px;
+}
+
