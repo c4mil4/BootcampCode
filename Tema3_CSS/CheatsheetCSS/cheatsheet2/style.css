@@ -1,3 +1,9 @@
+p::first-letter{
+    font-size: 3em;
+    color:red;
+}
+
+
 /* tipos de display; none,inline,block,inline-block*/
 [class^="box"] {
     background-color: steelblue;
