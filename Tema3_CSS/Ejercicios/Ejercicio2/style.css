@@ -3,15 +3,16 @@ div{
     width: 20%;
     height: 20px;
     border: 1px;
-    border-style: groove;
+    border-style:groove;
+    Padding: 5px;
 }
 
 span#previous{
-    margin-left: 4px;
+    margin-left: 1%;
     
 }
 
 span#next{ 
-    margin-left: 240px;
+    float: right ;                                                                                                                                     
+    margin-right: 1%;
 }
-
