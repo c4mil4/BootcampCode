@@ -1,0 +1,80 @@
+body{
+    color: #fff;
+    background-color:currentColor ;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+}
+
+.container{
+    padding: 1px 10px;
+
+}
+/* estilo de banner*/
+.brand-banner {
+    background-color: chocolate;
+}
+
+.navbar{
+    background-color: black;
+
+}
+
+.navbar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li{
+    display:inline
+
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 15px;
+    
+}
+.img-header{
+    background-image: url(../image/descarga.jpeg);
+    text-align : center;
+    background-position: center right;
+}
+
+.img-header h1{
+    margin:30px;
+    line-height: 1.6em;
+    font-size: 3em;
+}
+
+.container.main{
+    background-color: #fcf8e3;
+    color:grey;
+}
+
+.container.main article{
+    color:gold;
+    margin-left:15%;
+    width: 50%;
+    display: inline-block;
+}
+
+.container.main aside{
+    background-color: black;
+    color: honeydew;
+    margin-right: 5%;
+    width: 20%;
+    float:right;
+    display: inline;
+    margin-top: 29px;
+}
+
+footer span{
+    background-color: black;
+    color: white;
+	text-align: center;
+	padding:20px;
+	margin-top:40px;
+    width: 50px;
+    

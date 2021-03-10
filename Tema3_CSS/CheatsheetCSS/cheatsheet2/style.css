@@ -213,8 +213,27 @@ equivalente al anterior*/
     box-sizing: border-box;
 }
 
+/* Media queries*/
 
+.responsive { /* Escritoyio / Desktop */
+    height:100px;
+    background-color: aquamarine;
+    width: 30%;
+}
 
+/* Tablet*/
+@media only screen and (max-width:920px) {
+    .responsive {
+        width: 50%;
+    }
+}
+
+/* Mobile*/
+@media only screen and (max-width:700px) {
+    .responsive {
+        width: 100%;
+    }
+}
 
 
 
