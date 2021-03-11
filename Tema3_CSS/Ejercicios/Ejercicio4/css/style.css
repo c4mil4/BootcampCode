@@ -13,7 +13,13 @@ header {
     margin-bottom: 20px;
 }
 
-.top-banner {
+ .top-banner{
+     display:flex;
+     justify-content: space-between;/* ayuda a que cuando la ventana se cierra las cajas no se salgan del contenedor*/
+     align-items: center;
+ }
+
+/*.top-banner {
    position: relative; 
 }
 
@@ -22,7 +28,7 @@ header {
     right: 10px;
     top: 50%;
     margin-top: -17px;
-}
+}*/
 
 .top-banner input {
     height: 34px; /* Para que no dependa del Navegador */

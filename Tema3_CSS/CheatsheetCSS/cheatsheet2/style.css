@@ -55,9 +55,13 @@ equivalente al anterior*/
 .pos-absolute-parent {
     height: 300px;
     border: 15px solid tomato;
-    position: relative;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* position:relative*/
 .pos-absolute-child {
     height: 50px;
     width: 50px;
@@ -235,7 +239,10 @@ equivalente al anterior*/
     }
 }
 
-
+/* Flexbox*/
+.flex-parent{
+    display: flex;
+}
 
 
 
