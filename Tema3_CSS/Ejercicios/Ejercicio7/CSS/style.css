@@ -17,7 +17,7 @@ div.container-padre{
     gap: 10px;
 }
 
-h1.text{
+h3.text{
     font-family:Arial, Helvetica, sans-serif;
     color: beige;
     text-align: center;
@@ -63,7 +63,7 @@ footer{
     margin-top: 20px;
 }
 
-div.circulo{
+div.foto{
     background-color: beige;
     border-radius: 50%;
     width: 50px;
@@ -73,14 +73,12 @@ div.circulo{
     
 }
 
-div.rectangulo{
+div.caja-5{
     background-color:beige;
     border-radius: 5%;
-    /* padding-right: 65px; */
     width: 35px;
     height: 35px;
-    /* padding-left: 65px; */
     margin-top: 20px;
-     padding: 0 65px;
+    padding: 0 65px;
 }
 
