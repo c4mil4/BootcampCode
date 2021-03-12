@@ -1,0 +1,20 @@
+[class^="matriz"] {
+    background-color:teal;
+    width: 90px;
+    height: 90px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.conteiner-padre{
+    display: grid;
+    grid-template-columns: repeat(4,90fr);
+    grid-template-rows: repeat(4,90fr) ;
+    gap:5px;
+}
+.matriz:{
+
+}
