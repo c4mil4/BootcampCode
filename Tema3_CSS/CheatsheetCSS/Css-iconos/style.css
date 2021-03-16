@@ -5,7 +5,7 @@
 
 /*Desgradados o gradientes de color*/
 
-[clas^="gradient"] {
+[class^="gradient"] {
     height: 500px;
     margin-bottom:10px
 }
