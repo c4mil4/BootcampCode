@@ -247,4 +247,3 @@ if (randonNumber === quessedNumber) {
 } else if (randonNumber < quessedNumber) {
     console.log("El numero secreto es menor");
 }
-
