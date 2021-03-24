@@ -360,5 +360,30 @@ console.log(arrayX);
 //while 
 let contador = 0;
 while (contador <= 10 ) {
-    console.log(contador)
+    console.log(contador)1 
+
 }
+console.log("no entra en bucle infinito");
+
+// ForEch
+console.log(numbersArray);
+
+function myFunction (value, index){
+    console.log(`Indice ${index}: ${item}`);
+}
+
+numbersArray.forEach(myFunction);
+
+//Equivalente al forEch
+
+myFunction(numberArray[0],  0, numbersArray);
+myFunction(numberArray[1],  1, numbersArray);
+myFunction(numberArray[2],  2, numbersArray);
+myFunction(numberArray[3],  3, numbersArray);
+myFunction(numberArray[4],  4, numbersArray);
+
+let otherArray = []; // cuidado con la consola de navegador 
+
+numbersArray.forEach(item => otherArray.push(item));
+
+console.log(otherArray);
