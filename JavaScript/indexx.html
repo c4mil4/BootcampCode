@@ -33,6 +33,10 @@
         .child {
             background-color: darkcyan;
         }
+        .bg-blueviolet{
+            background-color: blueviolet;
+        }
+
     </style>
 </head>
 <body>
@@ -48,9 +52,9 @@
 
     <h1>Acceso a DOM</h1>
     <div class="grandparent" id="grandparent">
-        <div class="parent" id="parent1">
-            <div class="child" id="child1">Child 1</div>
-            <div class="child" id="child1">Child 2</div>
+        <div class="parent bg-dark rounded d-flex" id="parent1">
+            <div class="child" id="child1"><span>child 1</span></div>
+            <div class="child" id="child2">Child 2</div>
             
         </div>
         <div class="parent" id="parent2">
@@ -59,6 +63,19 @@
         </div>
     </div>
     
-    <script src="../JavaScript/dom.js"></script>
+
+    <script>
+        function saludo (){
+
+            alert("Hola desde un script interno");
+            console.log("has hecho click");
+        }
+        document.getElementsByTagName("a").item(1).addEventListener("click", saludo);
+    </script>
+
+
+
+
+    <script src="dom.js"></script>
 </body>
 </html>

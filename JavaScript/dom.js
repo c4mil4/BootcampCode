@@ -14,7 +14,7 @@ console.log(family);
 const grandParent = document.getElementById("grandparent");
 console.log(grandParent)
 
-const parents = document.getElementsByClassName("parent") //primo de array, agarra todos los elementos
+const parents = document.getElementsByClassName("parent"); //primo de array, agarra todos los elementos
 const parent1 = parents[0];                               // de la clase y devuelve un html colect
 const parent2 = document.getElementsByClassName("parent")[1];                                                        
 
@@ -26,7 +26,74 @@ console.log(children);
 let element = document.querySelector(".grandparent div");
 console.log(element);
 
-parent1.style.backgroundColor = "#333";
+const changeBackground = (element, color) => element.style.backgroundColor = color;
+
+/* changeBackground(children[0], "#333");
+changeBackground(parent1, "red");
+changeBackground(parent2.children[1], "pink");
+changeBackground(children[1].parentNode.parentNode, "#ddd"); */
+
+//nunca utilizamos acceso tan complejoscomo el siguente
+//changeBackground(parent1.children[1].previousElementSibling, "#ddd") //saltando elementos
+
+//"grandParent.children[1].previousElementSibling.lastElementChild,"
+
+//propiedades - properties
+//grandParent.innerHTML = "<h1>HOLA FUTURO</H1>"; //elemntos creados desde js
+//children[0].innerHTML= "child 1 v2";
+//console.log(children[0].innerHTML); // agrega etiqueta HTML
+//console.log(children[0].textContent);// ignora etiqueta HTML
+
+console.log("Classlist: ", parent1.classList);// class para alternar las clases
+parent1.classList.remove("bg-dark");
+parent1.classList.add("bg-blueviolet");
+console.log("Classlist: ", parent1.classList);
+
+parent1.classList.toggle("bg-blueviolet");
+//toggle: alterna la clase, si no está,la incluye,si està ,la elimina.
+
+
+parent1.setAttribute("name", "nombre-parent1"); //cuando lleva atributo es del html
+
+console.log();
+// create / remove elements
+let myDiv = document.createElement("div");
+myDiv.id= "new-Div";
+myDiv.classList.add("child");
+myDiv.textContent = "child 2.5";
+
+let myDiv2 = myDiv;
+
+parent2.appendChild(myDiv2); //un nodo no puede existir en dos sitios a la vez
+parent1.appendChild(myDiv); // mismo nodo con dos nombres diferentes
+
+myDiv2 = myDiv.cloneNode(true); //creamos un nuevo nodo a partir del original.
+parent2.appendChild(myDiv2);
+myDiv2.textContent = "child 5";
+
+myDiv.remove();
+
+let myDiv3 = myDiv.cloneNode(true);
+parent2.before(myDiv3);
+
+parent2.after(myDiv.cloneNode(true));
+
+//crear una funcion que me devuelva un nodo nuevo y que reciba etiqueta e ID.
+
+function createNode(tag, id) {
+    let newNode = document.createElement(tag);
+    newNode.id = id;
+    return newNode;
+}
+
+let newDiv = createNode("div", "identificador1");
+let link = createNode("a", "mainLink");
+
+link.textContent = "texto del enlace";
+link.setAttribute("href", "http://google.com"); // atributo href y el valor
+grandParent.appendChild(link);
+
+// eventos
 
 
 
@@ -35,6 +102,24 @@ parent1.style.backgroundColor = "#333";
 
 
 
+
+
+
+
+
+/* //crear una funcion que me devuelva un nodo nuevo y que reciba etiqueta e ID.
+
+function crearNode(label, id) {
+    let newNode = document.createElement(label)
+    newNode.id = id; 
+    return newNode;
+}
+
+let newDiv = createNode("div", "identificador1")
+let table = createNode("table", "identificador2")
+
+parent2.appendChild(newDiv);
+parent2.appendChild(table); */
 
 
 
