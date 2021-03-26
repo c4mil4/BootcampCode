@@ -71,7 +71,7 @@ myDiv2 = myDiv.cloneNode(true); //creamos un nuevo nodo a partir del original.
 parent2.appendChild(myDiv2);
 myDiv2.textContent = "child 5";
 
-myDiv.remove();
+myDiv.remove();//eliminar nodo
 
 let myDiv3 = myDiv.cloneNode(true);
 parent2.before(myDiv3);
@@ -93,7 +93,66 @@ link.textContent = "texto del enlace";
 link.setAttribute("href", "http://google.com"); // atributo href y el valor
 grandParent.appendChild(link);
 
-// eventos
+
+
+// eventos- event listeners = movimientos de raton,teclas. cada vez que se ejecuta el evento se ejecuta la funcion que està en espera
+//elemento ,llamar argumento,pasarla a la funcion que le quiera asignar.
+
+// Events
+
+const colorButton = document.getElementsByTagName("button")[0];//hey variable colorbutton agarra el documento del elemento de la etiqueta con nombre button.
+
+colorButton.addEventListener("click", function (event){  //variable,mas argumento mas funcion y sus argumentos.
+    console.log(event);
+    console.log(event.target);
+    document.body.classList.toggle("bg-red");
+    console.log(event.target.tagName);
+    
+    if (event.ctrlKey) {
+        document.body.classList.toggle("bg.red");
+    }
+    console.log(`X: ${event.clientX} | Y: ${event.clientY}`); //cuando el boton se ejecutete mostrara las cordinadas del raton.
+    console.log(`Alt: ${event.altKey}. Shift: ${event.shiftKey}. Ctrl: ${event.ctrlKey}`); //3 propiedades del evento.
+});
+
+const emailInput = document.querySelector("#emailInput"); 
+
+emailInput.addEventListener("focus", inputListener);
+emailInput.addEventListener("blur", inputListener); //para validar input
+
+function inputListener(e) {
+    console.log("Tipo de evento:", e.type);
+
+   /*  if (e.type === "focus") {
+        e.target.classList.add ("bg-blueviolet");
+
+    } else if (e.type === "blur") {
+        e.target.classList.remove("bg-blueviolet");
+    } */
+}
+
+const changeTitle = e => {
+    document.querySelectorAll("h1")[2].textContent = emailInput.value; //propiedad value importante
+}
+
+emailInput.addEventListener("keydowon", inputListener);
+emailInput.addEventListener("keyup", changeTitle);
+
+const container = document.getElementById("container");
+
+container.addEventListener("mouseover", inputListener);
+container.addEventListener("mouseout", inputListener);
+
+function coords(e) {
+    conts h1.document.querySelectorAll("h1")[3];
+    h1.textContent = `X: ${e.clientX} | Y: ${e.clientY}`;
+}
+
+ document.body.addEventListener("mousemove", coords);
+
+
+
+
 
 
 
