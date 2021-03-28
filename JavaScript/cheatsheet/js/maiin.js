@@ -17,14 +17,12 @@ function saludo () {
 
     function saludar( ) {
         console.log("Inicial: ", contador);
-
         // Comprobar con var y con let y ver diferencias
-        for (var contador = 0; contador < 6; contador++){
+        for (let contador = 0; contador < 3; contador++){
         console.log(contador);
         }
         console.log("Final: ", contador);
     }
-
     saludar();
 
     console.clear();
@@ -46,21 +44,18 @@ function saludo () {
     // x = 2 ERROR UNA CONSTANTE NO PUEDE SER SOBREESCRITA
     // const y; error missing = in const
 
-    
-
     // ---------- Tipos de Datos ----------
-    
     
     // ----------Primitivos----------
     let str = String("Im a string");
     let str2 = "Im another string"; // Recomendado  
     console.log(typeof str, typeof str2, typeof "");
-
-    // let str = "string" ES IGUAL A "string"
-
+    
     let num = Number (5);
     let num2 = 5;
-    console.log(typeof num, typeof num2, typeof 5, typeof 5.3, typeof"5");
+    console.log(typeof num, typeof num2, typeof 5, typeof 5.3, typeof "5");
+    
+    // let str = "string" ES IGUAL A "string"
 
     let bool = Boolean(true);
     let bool2 = false;
@@ -69,7 +64,7 @@ function saludo () {
     let undef;
     console.log(undef, typeof undef);
 
-    let selectedColor = null; //Limpiar una variable
+    let selectedColor = null; //Limpiar una variablecalcu
     console.log(selectedColor, typeof selectedColor);
 
     // ----------Objetos----------
@@ -123,6 +118,10 @@ function saludo () {
         jump() {
             console.log("Hey, mira como salto!!");
         }//Funcion 
+    }
+
+    presentarse() {
+        console.log(`me lamo ${this.name}, tengo ${this.age} y ${this.blonde ? `soy rubio`: `soy moreno`}`)
     }
 
     console.log(person);
@@ -235,15 +234,28 @@ console.log(chico.amigos);
 // ----------Condicionales----------
 
 const randonNumber = 9;
-const quessedNumber = "9";
-if(typeof randonNumber !== typeof quessedNumber){
+const guessedNumber = "9";
+
+if(typeof randonNumber !== typeof guessedNumber){
     console.log("Hey tienen diferente clase");
 }
 
-if (randonNumber === quessedNumber) {
+if(typeof guessNumber === "string"){
+    console.log("");
+}
+/* if (randonNumber === quessedNumber) {
     console.log("Has acertado el numero");
 } else if (randonNumber > quessedNumber) {
     console.log("El numero secreto es mayor");
 } else if (randonNumber < quessedNumber) {
     console.log("El numero secreto es menor");
-}
+} */
+
+
+
+
+// operador ternario
+
+let variable = 12 < 10 ? "el precio es menor" : "el precio es mayor";
+console.log(variable);
+

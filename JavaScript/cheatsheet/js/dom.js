@@ -6,12 +6,15 @@ console.log(document.URL);
 // document.title = "cheatsheet javascript (dom)";
 document.title += "(DOM)";// modo simplificado con el +=
 console.log(document.title);
+console.log(document.link); // accede a todos los enlaces de ese documento te lo devuelve como un array
+console.log(document.lastModified); // accede a la F/HS deñ documento.
 
-//Selectors
-const family = document.getElementsByTagName("div");
+// selectores
+
+const family = document.getElementsByTagName("div"); //por elemnto de etiqueta
 console.log(family);
 
-const grandParent = document.getElementById("grandparent");
+const grandParent = document.getElementById("grandparent");//por elemento de ID
 console.log(grandParent)
 
 const parents = document.getElementsByClassName("parent"); //primo de array, agarra todos los elementos

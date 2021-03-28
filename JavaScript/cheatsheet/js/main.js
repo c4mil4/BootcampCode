@@ -123,8 +123,13 @@ let person = {
     jump() {
         console.log("Hey, mira como salto!!");
     },//Funcion 
-
 }
+
+presentarse() {
+    console.log(`me lamo ${this.name}, tengo ${this.age} y ${this.blonde ? `soy rubio`: `soy moreno`}`)
+}
+
+person.presentarse();
 
 console.log(person);
 console.log(`Se llama ${person.name} y tiene ${person.age} años`);
@@ -342,6 +347,9 @@ let perimeterOfSquare = function (side) { // Función anónima normal
     perimeterOfSquare = side => side * 4; // Si sólo tiene 1 param, puedo quitar paréntesis.
     
     console.log(perimeterOfSquare(5));
+
+   /*  console.log(typeof function (){});
+    console.log(typeof (() => {})); */
 
 //------------ for
 for (let i = 0; i <= 10; i++) {
