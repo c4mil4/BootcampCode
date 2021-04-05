@@ -109,10 +109,40 @@ for (let i = 0; i < 10 ; i++) {
     const li = document.createElement("li")
     li.innerHTML = `element ${i}`;
     ul.appendChild(li);  
-}
+};
+
+//Apartado 8
+
+const buttonUrl = document.querySelector("#buttonUrl");
+
+buttonUrl.addEventListener("click", function (event){
+    const aTarget = document.querySelector("#aUrl").target;
+    if (aTarget === "_self") {
+        document.querySelector("#aUrl").target = "_blank" ;
+    }else{
+        document.querySelector("#aUrl").target = "_self"
+    }
+})
+
+//Apartado 9
+
+const selectOpcion = document.querySelector('#selectColour');
+
+selectOpcion.addEventListener("change", function (event) {
+    const selectOpcionValue = document.querySelector('#selectColour').value;
+    document.querySelector('#paragraph').style.color = selectOpcionValue;
+}); 
+
+
+
+
+
+
 
 //solucion alternativa con arrow function. del apatado 2
-button.addEventListener("click", () => document.body.style.background = "violet");
-/* const contenedor = document.getElementById("contenedor");
+/* button.addEventListener("click", () => document.body.style.background = "violet"); */
+
+
+/* const contenedor = document.getElementById("contenedor");    
 const parrafo1 = document.getElementById("contenedor");
 const parrafo2 = document.getElementById("contenedor"); */
