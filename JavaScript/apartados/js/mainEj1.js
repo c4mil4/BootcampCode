@@ -133,9 +133,57 @@ selectOpcion.addEventListener("change", function (event) {
     document.querySelector('#paragraph').style.color = selectOpcionValue;
 }); 
 
+//Apartado 10: Incluir un botón que al pulsarlo genere un número aleatorio y mantenga en una lista actualiza el número 
+//de elementos que se han generado, los que son pares y los que son impares.
 
+const currentRandom = document.getElementById("currentRandom");
+const totalNumbers = document.getElementById("totalNumbers");
+const oddNumbers = document.getElementById("oddNumbers");
+const eventNumbers = document.getElementById("eventNumbers");
 
+document.getElementById("randomButton").onclick = () =>{
+    const randomNumber = Math.floor(Math.random() * 100);//Alternativa: parseInt
+    currentRandom.textContent = randomNumber;
 
+    totalNumbers.textContent++; //totalNumbers.textContent = Number(totalNumbers.textContent) + 1; //todo lo que se adquiera de text se devuelve en strings
+    randomNumber % 2 === 0 ? eventNumbers.textContent++ : oddNumbers.textContent++;
+};
+
+//Aparatdo 12: Crearemos una clase .btn en CSS que le de ciertos estilos a un botón. Al hacer click en el botón haremos 
+//“toggle” o alternaremos esa clase, es decir, si está presente la quitaremos y si no está, la añadiremos.
+document.querySelector("#toggler").onclick = (e) => e.target.classList.toggler("btn");
+
+//Apartado extra: El código siguiente, añade un eventListener a cada botón para que cuando se haga click en cada uno de 
+//ellos, le cambie el backgroundColor.Refactorizar el código para hacerlo con un único forEach.
+
+let buttons = document.getElementsByClassName('btn-green'); //Devuelve HTMLCollection.
+
+buttons[0].addEventListener('click', () => {
+    buttons[0].style.backgroundColor = "green";
+});
+
+buttons[1].addEventListener('click', () => {
+    buttons[1].style.backgroundColor = "green";
+});
+
+buttons[2].addEventListener('click', () => {
+    buttons[2].style.backgroundColor = "green";
+});
+
+//Solución 1
+
+/* Array.from(buttons).forEach(button => button.onclick = e => e.target.style.backgroundColor = "green" ); */ //despues del igual espera una funcion.
+
+//Solución 1
+Array.from(buttons).forEach(button =>{
+    
+    button.addEventListener("click", function (e) {
+        e.target.style.backgroundColor = "green";
+    });
+}); 
+
+/* buttons = document.querySelector(".btn-green");
+ */
 
 
 

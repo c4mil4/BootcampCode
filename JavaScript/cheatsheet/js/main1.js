@@ -128,6 +128,8 @@ function saludo () {
     console.log(`Se llama ${person.name} y tiene ${person.age} años`);
     
     person.name = "Dimitrov";
+
+
     // Acceso por punto / Dot notation
 
     console.log(person, typeof person);
@@ -172,6 +174,34 @@ person2.talk();
 person3.talk();
 
 console.clear();
+
+
+//Object constructor using functions//
+
+function Car(brand,color, weight, topSpeed) { //coche recive la propiedad/argumento por parametro
+    this.brand = brand;
+    this.color = color;
+    this.weight= weight;
+    this.topSpeed = topSpeed;
+    this.getDescription = function () {
+        return `This ${this.color} ${this.brand} weights ${this.weight}` +
+        `Kilos and can reach up to ${this.topSpeed} kms/h.`;  
+    };
+}//preES5
+
+const car1 = new Car("Mercedes", "red", undefined, 200);
+const car2 = new Car("Volvo", "white", 2500, 100);
+const car3 = new Car("Volkswagen", "blue", 1500, 175);
+
+console.log(car1, car2, car3);
+
+console.log(car2.weight);
+
+console.log(car3.getDescription());
+
+
+
+
 // ---------- Arrays ----------
 
 let selectedColors = ["red", "blue"]; // Array de String
