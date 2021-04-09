@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cheatsheet JavaScript</title>
     <style>
         a {
-            font-size: 3em;
+            font-size: 2em;
             display: block;
         }
 
@@ -22,89 +21,65 @@
             border: 5px solid black;
             box-sizing: border-box;
             display: flex;
-            flex-grow: 1;
             gap: 25px;
             padding: 25px;
+            flex-grow: 1;
             flex-wrap: wrap;
-
         }
 
-   /*      .grandparent {
-            height: 500px; tamaño al abuelo 
-            background-color: brown;
-        }
-
-        .grandparent, .parent {
-            border: 5px solid black;
-            box-sizing: border-box;
-            display: flex;para que el abuelo coga bien todos los hijos  
-            flex-grow: 1;coge todo el espacio disponible los contenedores 
-            gap: 25px; para que se separen los padres 
-            padding: 25px;
-            flex-wrap: wrap;
-        } 
-         */
         .parent {
-            background-color: cadetblue;
-        }
-
-        .child {
             background-color: darkcyan;
         }
 
-        .bg-blueviolet {
-            background-color: blueviolet;
+        .child {
+            background-color: khaki;
+        }
+
+        .bg-red {
+            background-color: red;
         }
 
         #container {
-            border: 5px solid black;
-            box-sizing: border-box;
-            display: flex;
-
-
+            height: 100px;
+            border: 3px solid gray;
         }
     </style>
 </head>
 
 <body>
 
-</body>
-
-</html>
-
-<body>
-
-    <h1>Procesar Javascript</h1>
-    <a href="#" onclick="console.log('Hola desde un script inline')">Inline Script</a>
+    <h1>Procesar JavaScript</h1>
+    <a href="#" onclick="console.log('Hola desde un script inline')">Inline script</a>
     <!--evitar los inline y hacerlo desde un archivo aparte en css-->
     <a href="#">Internal Script</a>
-    <a href="#">External Script</a>
+    <a href="#">External script</a>
 
-    <h1>Acceso a DOM</h1>
-    <div class="grandparent" id="grandparent"> <!-- div con clase- ID abuelo -->
-        <div class="parent bg-dark rounded d-flex" id="parent1"> <!-- div padre1 -->
-            <div class="child" id="child1"><span>child 1</span></div>
+    <h1>Acceso al DOM</h1>
+    <div class="grandparent" id="grandparent">  <!-- div con clase- ID abuelo -->
+        <div class="parent bg-dark rounded d-flex" id="parent1"><!-- div padre1 -->
+            <div class="child" id="child1"><span>Child 1</span></div>
             <div class="child" id="child2">Child 2</div>
-
         </div>
-        <div class="parent" id="parent2"><!-- div padre2 -->
-            <div class="child" ide="child3">child 3</div>
-            <div class="child" ide="child4">child 4</div>
+        <div class="parent" id="parent2">
+            <div class="child" id="child3">Child 3</div>
+            <div class="child" id="child4">Child 4</div>
         </div>
     </div>
 
-    <h1>EVENTOS</h1>
-    <div id="conteiner">
+    <h1>Eventos</h1>
+    <div id="container">
         <button>Cambiar de color</button>
     </div>
 
-    <label for=emailInput>Introduce tu email</label>
+    <label for="emailInput">Introduce tu email</label>
     <input type="email" id="emailInput">
 
     <h1>Coords</h1>
 
+    <div style="height: 1000px;"></div>
 
 
+<<<<<<< HEAD
 
 
     <script>
@@ -121,6 +96,11 @@
     <div style="height:1000px"></div>
 
     <script src="main1.js"></script>
+=======
+    <script src="main.js"></script>
+    <!--Script al final del bodoy siempre-->
+    <script src="js/dom1.js"></script> 
+>>>>>>> 01950d2cef495e43c77ee05c3498629f563353a0
 </body>
 
 </html>
