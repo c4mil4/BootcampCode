@@ -66,14 +66,14 @@ buttonCopyText.addEventListener("click", function (event) {
     const inputValueCopyText = document.getElementById("inputCopyText").value;
     document.getElementById("pCopyText").innerHTML = inputValueCopyText;
 
-})
+});
 //apartado 4.2
 const inputCopyTextPulsation = document.querySelector("#inputCopyTextPulsation");
 
-inputCopyTextPulsation.addEventListener("keypress", function (event) {
+inputCopyTextPulsation.addEventListener("keypress", function (event) { //Hacer con input
     const inputValueCopyTextPulsation = document.querySelector("#inputCopyTextPulsation").value;
     document.querySelector("#pCopyTextPulsation").innerHTML = inputValueCopyTextPulsation;
-})
+});
 
 //apartado 5
 
@@ -122,16 +122,30 @@ buttonUrl.addEventListener("click", function (event){
     }else{
         document.querySelector("#aUrl").target = "_self"
     }
-})
+});
 
 //Apartado 9
 
 const selectOpcion = document.querySelector('#selectColour');
 
-selectOpcion.addEventListener("change", function (event) {
+selectOpcion.addEventListener("change", function (event) { //el chage cambia cuando se selecciona otro elemento
     const selectOpcionValue = document.querySelector('#selectColour').value;
     document.querySelector('#paragraph').style.color = selectOpcionValue;
 }); 
+
+/* //Apartado 10 
+const buttonNumbsRandom = document.querySelector(`#buttonNumbsRandom`);
+
+buttonNumbsRandom.addEventListener("click", function (event) {
+    //crear una constante que guarade numeros aleatorios
+    const numbSave = 
+    
+    //separar en impar/par
+} */
+    
+
+
+
 
 
 

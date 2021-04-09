@@ -1,5 +1,5 @@
 //apartado1:  Define e inicializa un array con 5 elementos string en una sola línea.
-let array = [17, 20, 25, 30, 11];
+let array = ["17", "20", "25", "30", "11"];
 console.log(array);
 console.log("ejercicio 1");
 //apartado2: Define un array inicialmente vacío. Añade tres elementos de tipo number posteriormente. Elimina por
@@ -17,6 +17,13 @@ console.log("ejercicio 2")
 //apartado 3 : Escribe una función nombrada que devuelva true si el argumento dado es de tipo boolean y false en
 //caso contrario.
 
+/* function isBool(params) {
+    return typeof params === "Boolean";
+};
+console.log(isBool(true));
+console.log(isBool("true"));
+console.log(isBool(2)); */
+
 function exerciseThree(params) {
     if (params === true | params === false) {
         return true;
@@ -29,7 +36,10 @@ console.log(exerciseThree(i));
 console.log("ejercicio 3");
 
 //apartado 4 : Escribe una función que devuelva la longitud de un string recibido por argumento
+/* 
+const lengthCalculate = params => params.length;
 
+console.log(lengthCalculate("hola mundo")); */
 
 function lengthCalculate(params) {
     return params.length;
@@ -40,6 +50,15 @@ console.log(lengthCalculate(lengthText));
 console.log("ejercicio 4");
 
 //Apartado 5: Crea una función de flecha que reciba una cantidad de minutos y lo devuelva convertido en segundos.
+
+/* function mintOseg = value => value * 60;
+console.log(mintOseg(10)); */
+
+function mintOseg(value) {
+    return value + 60;
+};
+console.log(mintOseg(10));
+console.log("ejercicio 5");
 
 // Apartado 6 :Crea una función que reciba un número y devuelva el siguiente número par. (Si él es par, lo devolverá
 //directamente).
@@ -76,7 +95,6 @@ console.log("ejercicio7");
 
 //Apartado 8: . Crea una función que reciba un array y devuelva su último elemento. Prueba tu función con varios arrays
 //de diferentes longitudes.
-
 
 function receive(arrayColours) { // <- Función creada.
     let calculo = arrayColours.length - 1; // <- Variable creada para recuperar la ultima posición.
@@ -183,13 +201,21 @@ let objeto = (parseDomain("facebook.com"));
 console.log(objeto);
 console.log("ejercicio13");     
 
+/* ejercicio 13:
+const parseDomain = function (x) {
+const array = x.split(".");
+const object = {
+Domain: array[0],
+TLD: array[1]
+}
+return object;
+} */
+
 //Apartado 14: . Nos han prohibido el uso del operador de igualdad estricta (===), pero queremos poder seguir utilizando
 //dicha esa funcionalidad. Crea una función que devuelva true si dos números tienen el mismo valor y el
 //mismo tipo de dato. Debemos usar el operador lógico “&&”. Prueba tu función con dos estos inputs:
 //strictEquality("5", 5); // false
 //strictEquality(5, 5); // true
-
-
 
 function logical(a ,b) {
     if ((typeof a == typeof b) && (a == b)) {
@@ -227,6 +253,24 @@ console.log("ejercicio15");
 
 //Apartado 16: Crea una función que reciba un string y determine si está vacío sin utilizar la propiedad length.
 
+/* function receiveStringV (stringVacio) {
+    if (stringVacio === " ") {
+        return true;
+    }else{
+        return false;
+    }
+};
+console.log(receiveStringV("jsgkflf"));
+console.log("Ejercicio 16"); */
+
+// Apartado 17: Imprimir elemento a elemento el array del apartado 1 de cuatro formas diferentes: 
+//• while
+//• for
+//• for of
+//• forEach
+
+
+
 //Apartado 18:Crea una función que reciba un string y un número N y devuelva el string original repetido N veces.
 
 function repeatString(J, N) {
@@ -247,7 +291,14 @@ console.log("ejercicio18");
 //     negativos: 25,
 // }
 
-
+/* const getVoteCount = function (obj) {
+    return obj.upVotes - obj.downVotes;
+    }
+    
+    const votes = {upVotes: 35, downVotes: 15};
+    console.log(getVoteCount(votes));
+    console.log(getVoteCount({upVotes: 35, downVotes: 15}));
+ */
 function recibeObject(params) {
     let calculate = params.positivo - params.negativo;
     return calculate;
@@ -272,6 +323,7 @@ function returnTypes(arrayDatosMezclados) {// creo una funcion que recibe por pa
         let saveTypesDates = typeof element // creo una variable que guarda tipo de dato
         arrayTipoDeDatos.push(saveTypesDates);// guardo  los datos, en el array tipoDeDatos        
     });  
+    
     return arrayTipoDeDatos; // devuelo el array tipo de datos
 };
 let x = returnTypes(["I'm learning JS in a Bootcamp 🚀", 7.5, {}, 0, undefined, [], "codespace"]);
@@ -298,7 +350,10 @@ console.log(z); */
 
 //Apartado 22:Crea una función de flecha que devuelva “Positivo” si el número que recibe por argumento es mayor o
 //igual que cero y “Negativo” en caso contrario. Usa el operador ternario.
-
+const isPositive = num => num >= 0 ? "positive" : "negative";
+console.log(isPositive(-5));
+console.log(isPositive(5));
+console.log(isPositive(0));
 
 //Apartado 23: Crea una función que dado un array cualquiera y un índice, borre el elemento guardado en ese índice.
 
@@ -313,7 +368,7 @@ console.log("ejercicio23");
 
 //Apartado 24: Usando la función del apartado anterior, crea otra función que dado un array de números y un número a
 //filtrar, devuelva un array borrando todos las apariciones de dicho número.
-
+//object.entrie se puede usar para este tipo de ejercicio
 // borrando todos las apariciones de dicho número, Significado:
 /* [1,2,4,5,6,7,2,4,5,1] */
 /* 1 */
@@ -340,10 +395,29 @@ console.log("ejercicio24");
 //propiedades. La segunda devolverá un array con los valores de dichas propiedades.
 //Investigar los métodos keys y values del prototipo de Object.
 
+
+function propiedadesDearray(object) {
+    return Object.keys(object)
+    
+};
+
+let colores = {
+    color1:"esmeralda",
+    color2:"purpura",
+    color3:"dorado",
+};
+
+console.log(propiedadesDearray(colores));
+console.log("Ejercicio 25");
+
+/* const valoresArray = (object) => Object.values(object);
+
+console.log(valoresArray(clase));*/
+
 //Apartado 26: Crea una función que invierta un string
 
 function reverseString(sTring) {
-    return sTring.split("").reverse().join("");
+    return sTring.split("").reverse().join(""); //split/convierto array. reverse/invierto. join/devuelvo string
 };
 
 let sTring = ("Hola");
@@ -353,16 +427,22 @@ console.log("ejercicio 26");
 //Apartado 27: Crea una función que compare strings sin tener en cuenta las mayúsculas / minúsculas.
 
 function compareStrings(params1, params2) {
-    if (params1 == params2) {
-        return true;
-    } else {
-        return false;
-    };
+    return (params1 == params2) 
 };
 
-let params1 = "12365";
-let params2 = "12365"
+let params1 = "Darth Coder";
+let params2 = "dart coder"
+
 console.log(compareStrings(params1, params2));
 console.log("ejercicio27");     
 
-//Aparatado 28:
+//Aparatado 28: Crea una función que convierta en mayúscula sólo la primera letra de cada palabra de un string dado. El
+//apartado 11 será de ayuda. Investigar cómo unir un array de strings en un único string.
+
+
+//Apartado 29
+const negate  = (logical) => !logical;
+
+console.log(negate(true));
+console.log(negate(false));
+console.log("Ejercicio 28");
