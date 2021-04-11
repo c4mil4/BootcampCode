@@ -444,10 +444,6 @@ let params2 = "dart coder"
 console.log(compareStrings(params1, params2));
 console.log("ejercicio27");     
 
-<<<<<<< HEAD:JavaScript/sintaxisBásica/js/mainEjSintaxis.js
-//Aparatado 28:
-//cambiar los let por const
-=======
 //Aparatado 28: Crea una función que convierta en mayúscula sólo la primera letra de cada palabra de un string dado. El
 //apartado 11 será de ayuda. Investigar cómo unir un array de strings en un único string.
 
@@ -458,4 +454,3 @@ const negate  = (logical) => !logical;
 console.log(negate(true));
 console.log(negate(false));
 console.log("Ejercicio 28");
->>>>>>> 01950d2cef495e43c77ee05c3498629f563353a0:JavaScript/ejercicios/sintaxisbasica/js/mainEjSintaxis.js
