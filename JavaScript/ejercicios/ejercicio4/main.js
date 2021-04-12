@@ -58,7 +58,15 @@ updateTable(); */
 
 addBookButton.addEventListener("click", e => {
     e.preventDefault();
+    
     console.log(titleInput.value, authorInput.value, salesInput.value, priceInput.value);
+    booksTbody.push(new Book(
+        100, titleInput.value,
+        authorInput.value,
+        salesInput.value,
+        priceInput.value)
+    );
+    updateTable();
 });
 
 
