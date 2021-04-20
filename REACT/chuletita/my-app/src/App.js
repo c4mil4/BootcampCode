@@ -1,18 +1,15 @@
 import './App.css';
+import FirstComponent, {SecondComponent, ThirdComponent} from "./components/FirstComponent";
 
 function App() {
   return (
     <div className="App">
-     <Card/>
-     </div>
+      <FirstComponent title="Titulo enviado desde el padre" date="16 de agosto de 2025"/>
+      <FirstComponent title="Otro titulo"/>
+      <SecondComponent />
+      <ThirdComponent />
+    </div>
   );
 }
 
-
-export default function Card() {
-  return(
-    
-  )
-}
-  
 export default App;

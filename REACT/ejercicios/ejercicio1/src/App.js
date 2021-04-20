@@ -1,4 +1,4 @@
-import './App.css';
+import Card from "./components/Card";
 
 function App() {
   return (
@@ -8,17 +8,10 @@ function App() {
      paragraph="Lorem ipsu"
      href="https://google.com"
      linkText="Mas información"
-     imgUrl="https://"
+     imgUrl="https://i.stack.imgur.com/y90pT.jpg"
      />
      </div>
   );
 }
 
-
-export default function Card() {
-  return(
-    
-  )
-}
-  
 export default App;
