@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-export default function FursrComponent() {
+export default function FirstComponent() {
     return (
         <div>
             <h3>Titulo</h3>
