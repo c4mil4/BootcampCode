@@ -1,10 +1,11 @@
-import Footer from "./Components/Footer";
-import Router from './Routers/Router';
+import Router  from "./Router/Router";
+import './App.css';
+import Footer from './Components/Footer';
+
 
 function App() {
   return (
-    <div className="d-flex flex-column vh-100">     
-      
+    <div>
       <Router />
       <Footer />
     </div>
@@ -12,4 +13,3 @@ function App() {
 }
 
 export default App;
-
